@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+cleos get table example example blog
+
+cleos push action example addblog '["angelo", "My first dApp", "<a href=\"#\">Musical doodle</a>"]' -p peter
+
+cleos push action example addblog '["angelo", "My first dApp", "<a href=\"#\">Musical doodle</a>"]' -p angelo
+
+cleos get table example example blog
+
+cleos push action example removeblog '["angelo", 0]' -p angelo
+
+cleos get table example example blog
+
+
+# GUI DEMO
+open web/blog.html

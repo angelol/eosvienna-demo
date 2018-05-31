@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+cleos wallet unlock --password PW5JiugLyrkDNvgcmyVqPiw79JzX8KrXDWf9H6Z8A67MtUpmh47g2
+
+# Deploy bios contract
+cleos set contract eosio /Users/al/Projects/eos/eos-dawn-3.0/build/contracts/eosio.bios
+
+# Create some users
+cleos create account eosio example EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8 EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8
+
+cleos create account eosio angelo EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8 EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8
+
+
+cleos create account eosio peter EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8 EOS4z4PDboRgvP2KPrJPpLGStuEjb5qTaZedEgXgbAKp9JTK8gHs8
+
