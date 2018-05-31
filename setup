@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-# replace private key with your own
+# replace password with your own
 cleos wallet unlock --password PW5JiugLyrkDNvgcmyVqPiw79JzX8KrXDWf9H6Z8A67MtUpmh47g2
 
 # Deploy bios contract
