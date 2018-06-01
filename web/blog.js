@@ -12,9 +12,9 @@ function submit(event) {
                     account: account,
                     name: 'addblog',
                     authorization: [{
-                    actor: author,
-                    permission: 'active'
-                }],
+                    	actor: author,
+                    	permission: 'active'
+                	}],
                 data: {
                     author: author,
                     title: title,
