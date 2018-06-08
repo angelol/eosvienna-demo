@@ -7,7 +7,7 @@ $(function() {
 		
 		$("h1").text(row.title);
 		$("div.author").text(row.author);
-		$("div.body").text(row.html);
+		$("div.body").html(row.html);
     });
 
 });
