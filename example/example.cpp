@@ -35,9 +35,12 @@ class example: public contract {
 	    string html;
 
 	    uint64_t primary_key()const { return id; }
+        account_name by_author() const { return author; }
 	    EOSLIB_SERIALIZE(blog, (id)(author)(title)(html))
 	};
-	typedef multi_index<N(blog), blog> blog_index;
+	typedef multi_index<N(blog), blog,
+	    indexed_by< N(author), const_mem_fun<blog, account_name, &blog::by_author>>
+	> blog_index;
 	blog_index blogs;
 };
 
